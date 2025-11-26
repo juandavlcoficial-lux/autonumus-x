@@ -101,6 +101,7 @@
             margin-bottom: 40px;
             text-shadow: 0 0 12px var(--green);
         }
+
         .bio-box {
             max-width: 900px;
             margin: auto;
@@ -111,6 +112,61 @@
             font-size: 1.2rem;
             line-height: 1.8;
             border-radius: 10px;
+        }
+
+        /* Founders */
+        .founders {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #222;
+            text-align: center;
+            transition: .3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 18px var(--blue);
+        }
+        .card h3 { font-family: Orbitron; color: var(--blue); }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #00eaff88;
+            animation: fade .9s ease forwards;
+            opacity: 0;
+        }
+        @keyframes fade { to {opacity: 1;} }
+
+        /* Reviews */
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            gap: 25px;
+        }
+        .review {
+            background: var(--card);
+            padding: 25px;
+            border-left: 4px solid var(--blue);
+            border-radius: 10px;
+        }
+        .review .author {
+            margin-top: 10px;
+            color: var(--green);
+            font-weight: bold;
         }
     </style>
 </head>
@@ -130,7 +186,7 @@ for (let i=0;i<45;i++){
 
 <header>
     <div class="logo">AUTONOMUS <span style="color:var(--blue)">X</span></div>
-    <div class="tagline">El futuro de la limpieza urbana empieza aquí</div>
+    <div class="tagline">El futuro del saneamiento urbano empieza aquí</div>
     <button class="cta" onclick="document.getElementById('bio').scrollIntoView({behavior:'smooth'})">DESCUBRIR</button>
 </header>
 
@@ -138,44 +194,16 @@ for (let i=0;i<45;i++){
     <h2 class="title">REDEFINIENDO EL ENTORNO URBANO</h2>
 
     <div class="bio-box">
-        AUTONOMUS X nace como respuesta directa a los desafíos urbanos del siglo XXI: contaminación, ruido,
-        congestión, falta de sostenibilidad y modelos de gestión de residuos obsoletos. Nuestro camión autónomo
-        representa una nueva generación de vehículos municipales, totalmente eléctricos, inteligentes y diseñados
-        para integrarse en la infraestructura avanzada de las Smart Cities.
-
+        AUTONOMUS X redefine la manera en la que las ciudades gestionan sus residuos. Nuestro camión autónomo combina
+        inteligencia artificial de navegación nivel 5, sensores LIDAR de última generación y una carrocería sostenible
+        hecha con materiales reciclados de alta resistencia. El resultado es un vehículo silencioso, eficiente, seguro
+        y completamente adaptado al entorno urbano del futuro.
         <br><br>
-
-        Gracias a tecnologías de navegación nivel 5, sensores LIDAR de precisión y un sistema propio de IA adaptativa,
-        AUTONOMUS X es capaz de operar con una eficiencia jamás vista, funcionando en silencio, anticipándose a
-        obstáculos y optimizando las rutas de recolección mediante aprendizaje continuo.
-
-        <br><br>
-
-        Su diseño combina la estética eco-futurista con una arquitectura realista propia de prototipos industriales
-        de alta gama: paneles solares integrados, luces LED verdes, motor eléctrico de cero emisiones y carrocería
-        fabricada con compuestos reciclados de alta resistencia.
+        Gracias a su arquitectura eco-tecnológica, AUTONOMUS X opera con cero emisiones, paneles solares integrados
+        capaces de alimentar los sistemas auxiliares y un motor eléctrico optimizado para rutas largas con bajo
+        consumo energético.
     </div>
 </section>
-<style>
-.founders {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-.card {
-    background: var(--card);
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #222;
-    text-align: center;
-    transition: .3s;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 18px var(--blue);
-}
-.card h3 { font-family: Orbitron; color: var(--blue); }
-</style>
 
 <section id="team">
     <h2 class="title">LOS FUNDADORES</h2>
@@ -185,85 +213,50 @@ for (let i=0;i<45;i++){
         <div class="card">
             <h3>Juan David Torres</h3>
             <p>Director de Ingeniería y Robótica</p>
-            <p>Diseña los sistemas LIDAR, algoritmos de navegación autónoma y supervisa toda la estructura robótica del vehículo.</p>
+            <p>Responsable del cerebro autónomo del vehículo y la tecnología de navegación inteligente.</p>
         </div>
 
         <div class="card">
             <h3>Jesús Herrero</h3>
             <p>Director de Sostenibilidad</p>
-            <p>Responsable de los sistemas de energía, paneles solares integrados y materiales ecológicos de la carrocería.</p>
+            <p>Especialista en energías limpias, paneles solares inteligentes y materiales biodegradables.</p>
         </div>
 
         <div class="card">
             <h3>Joan Sancho</h3>
             <p>Director de Operaciones</p>
-            <p>Coordina la integración del camión en la infraestructura urbana y la eficiencia en la gestión municipal.</p>
+            <p>Lidera la integración del camión en infraestructuras municipales y rutas urbanas.</p>
         </div>
 
     </div>
 </section>
-<style>
-.gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-.gallery-grid img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 0 20px #0ff4;
-    animation: fade .9s ease forwards;
-    opacity: 0;
-}
-@keyframes fade { to {opacity: 1;} }
-</style>
 
 <section id="gallery">
     <h2 class="title">GALERÍA VISUAL</h2>
 
     <div class="gallery-grid">
-        <img src="img/camion_1.png">
-        <img src="img/camion_2.png">
-        <img src="img/camion_3.png">
-        <img src="img/camion_4.png">
+        <img src="https://images.unsplash.com/photo-1581091012184-5c73a8f39ab1?auto=format&q=80&w=800">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&q=80&w=800">
+        <img src="https://images.unsplash.com/photo-1601924582975-7a4df7bdc0f1?auto=format&q=80&w=800">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&q=80&w=800">
     </div>
 </section>
+
 <section id="mission">
     <h2 class="title">MISIÓN Y LABOR SOCIAL</h2>
 
     <div class="bio-box">
-        Nuestro objetivo es transformar por completo la percepción del saneamiento urbano. Con AUTONOMUS X,
-        buscamos un entorno más silencioso, saludable y eficiente. Nuestro compromiso está centrado en:
-
+        Nuestra misión es modernizar la gestión urbana con un sistema que reduzca emisiones, aumente la seguridad y
+        facilite una convivencia más saludable. AUTONOMUS X aporta:
         <ul>
-            <li><strong>Reducción del 100% de emisiones contaminantes</strong> gracias a motores eléctricos de última generación.</li>
-            <li><strong>Silencio operativo</strong>: recolecta de residuos nocturna sin molestias a los vecinos.</li>
-            <li><strong>Seguridad ciudadana</strong>: sensores de detección humana y frenado predictivo.</li>
-            <li><strong>Eficiencia municipal</strong>: reducción de costes entre un 30% y 45%.</li>
-            <li><strong>Sostenibilidad real</strong>: paneles solares inteligentes y materiales biodegradables.</li>
+            <li><strong>Cero emisiones</strong> gracias a su motor eléctrico optimizado.</li>
+            <li><strong>Silencio total</strong> para rutas nocturnas que no afectan al descanso vecinal.</li>
+            <li><strong>Máxima seguridad</strong> con sensores 360° y frenado predictivo.</li>
+            <li><strong>Reducción del gasto municipal</strong> en un 40%.</li>
+            <li><strong>Sostenibilidad real</strong> con paneles solares integrados.</li>
         </ul>
     </div>
 </section>
-<style>
-.reviews {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap: 25px;
-}
-.review {
-    background: var(--card);
-    padding: 25px;
-    border-left: 4px solid var(--blue);
-    border-radius: 10px;
-}
-.review .author {
-    margin-top: 10px;
-    color: var(--green);
-    font-weight: bold;
-}
-</style>
 
 <section id="reviews">
     <h2 class="title">OPINIÓN DE LOS ALCALDES</h2>
@@ -271,39 +264,32 @@ for (let i=0;i<45;i++){
     <div class="reviews">
 
         <div class="review">
-            “Tras las pruebas piloto en el casco urbano de Paterna, el silencio operativo y la eficiencia superaron
-            nuestras expectativas. La ciudadanía lo ha notado desde el primer día.”
+            “El modelo de limpieza autónoma que propone AUTONOMUS X encaja perfectamente con nuestra apuesta por
+            la modernización urbana.”
             <div class="author">— Alcalde de Paterna</div>
         </div>
 
         <div class="review">
-            “AUTONOMUS X ha demostrado ser la alternativa más segura en la recolección nocturna. La reducción de
-            emisiones mejora la calidad de vida en el municipio.”
+            “La reducción de ruido ha sido espectacular. Los vecinos están encantados.”
             <div class="author">— Alcalde de Burjassot</div>
         </div>
 
         <div class="review">
-            “Integrarlo en nuestras rutas municipales ha sido sorprendentemente sencillo. La IA del vehículo aprende
-            rápido y optimiza la logística.”
+            “Integrarlo en nuestras rutas ha sido fácil y la eficiencia ha mejorado desde el primer día.”
             <div class="author">— Alcalde de Manises</div>
         </div>
 
         <div class="review">
-            “El camión no solo reduce costes, sino que aporta una imagen moderna y sostenible a la ciudad.
-            Los vecinos nos felicitan por la iniciativa.”
+            “Un vehículo del futuro que ya opera en nuestro presente.”
             <div class="author">— Alcalde de Quart de Poblet</div>
-        </div>
-
-        <div class="review">
-            “Una solución innovadora que encaja perfectamente con nuestros proyectos Smart City.”
-            <div class="author">— Alcalde de Mislata</div>
         </div>
 
     </div>
 </section>
+
 <footer style="text-align:center; padding:40px; background:#000; border-top:2px solid var(--green);">
     <h3 style="font-family:Orbitron; color:var(--green);">AUTONOMUS X</h3>
-    <p>Innovación, sostenibilidad y autonomía al servicio de nuestras ciudades.</p>
+    <p>Innovación, sostenibilidad y autonomía al servicio de las ciudades.</p>
     <p style="opacity:.6;">© 2025 AUTONOMUS X — Todos los derechos reservados.</p>
 </footer>
 
